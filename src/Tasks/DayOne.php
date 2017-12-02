@@ -13,10 +13,8 @@ class DayOne implements DayI
 {
     private $input;
 
-    public function solvePartOne()
-    {
+    private function findCaptchas($array) {
         $sum = 0;
-        $array = $this->input;
         $length = count($array);
         for ($i = 0; $i < $length; $i++) {
             if ($i !== $length - 1) {
@@ -28,18 +26,39 @@ class DayOne implements DayI
         if ($array[0] === end($array)) {
             $sum += $array[0];
         }
+
         return $sum;
+    }
+
+    private function sortArray($array) {
+        $sortedArray = array();
+        $length = count($array);
+        for ($i = 0; $i < $length / 2; $i++) {
+            $sortedArray[$i * 2] = $array[$i];
+            $sortedArray[($i * 2) + 1] = $array[$i + 1];
+        }
+        return $sortedArray;
+    }
+
+    public function solvePartOne()
+    {
+        $array = $this->input;
+        return $this->findCaptchas($array);
     }
 
     public function solvePartTwo()
     {
-        // TODO: Implement solvePartTwo() method.
+        $array = $this->input;
+        $sortedArray = $this->sortArray($array);
+        return $this->findCaptchas($sortedArray);
     }
 
     public function resolve() {
         $parser = new Parser();
-        $this->input = $parser->parseIntoArray('./src/Input/DayOne');
+        $this->input = $parser->parseIntoArray('./Input/DayOne');
         echo('Part one: ' . $this->solvePartOne());
+        echo '<br>';
+        echo('Part two: ' . $this->solvePartTwo());
     }
 
 
