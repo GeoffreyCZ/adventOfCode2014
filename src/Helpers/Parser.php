@@ -23,7 +23,7 @@ class Parser
         return $array;
     }
 
-    public function parseByNewlineAndSpacesIntoArray($fileName)
+    public function parseIntsByNewlineAndSpacesIntoArray($fileName)
     {
         $output = [];
         $array = explode("\n", $this->loadFromFile($fileName));

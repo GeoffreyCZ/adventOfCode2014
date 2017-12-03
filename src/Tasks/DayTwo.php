@@ -30,13 +30,27 @@ class DayTwo implements DayI
 
     public function solvePartTwo()
     {
-        // TODO: Implement solvePartTwo() method.
+        $checksum = 0;
+        $array = $this->input;
+        foreach ($array as $key => $line) {
+            rsort($line);
+            for ($i = 0; $i <= 15; $i++) {
+                for ($j = $i + 1; $j <= 15; $j++) {
+                    if ($line[$i] % $line[$j] == 0) {
+                        $checksum += ($line[$i] / $line[$j]);
+                        break 2;
+                    }
+                }
+            }
+        }
+        return $checksum;
+
     }
 
     public function resolve()
     {
         $parser = new Parser();
-        $this->input = $parser->parseByNewlineAndSpacesIntoArray('./Input/DayTwo');
+        $this->input = $parser->parseIntsByNewlineAndSpacesIntoArray('./Input/DayTwo');
         echo('Part one: ' . $this->solvePartOne());
         echo '<br>';
         echo('Part two: ' . $this->solvePartTwo());
