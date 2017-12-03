@@ -51,7 +51,7 @@ class DayOne implements DayI
     public function resolve()
     {
         $parser = new Parser();
-        $this->input = $parser->parseIntoArray('./Input/DayOne');
+        $this->input = $parser->parseStringIntoArray('./Input/DayOne');
         echo('Part one: ' . $this->solvePartOne());
         echo '<br>';
         echo('Part two: ' . $this->solvePartTwo());
