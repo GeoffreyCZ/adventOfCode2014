@@ -11,7 +11,7 @@ require __DIR__ . '/vendor/autoload.php';
 use AdventOfCode\Tasks\DayOne;
 
 $dayOne = new DayOne();
-echo '<h2>Day one</h2>';
+echo '<h3>==========</h3>';
+echo '<h3>Day one</h3>';
 $dayOne->resolve();
-echo '<h2>==========</h2>';
 

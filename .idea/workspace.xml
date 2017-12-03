@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tasks/DayOne.php" afterPath="$PROJECT_DIR$/src/Tasks/DayOne.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Input/DayOne" afterPath="$PROJECT_DIR$/Input/DayOne" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,32 +16,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DayOne.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DayOne.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tasks/DayOne.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="52" column="48" lean-forward="true" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
+            <state relative-caret-position="432">
+              <caret line="57" column="5" lean-forward="false" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DayI.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tasks/DayI.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="238">
+              <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+              <folding>
+                <element signature="e#6#95#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,9 +75,9 @@
         <option value="$PROJECT_DIR$/src/Helpers/Parser.php" />
         <option value="$PROJECT_DIR$/src/Input/DayOne" />
         <option value="$PROJECT_DIR$/.gitingore" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/src/Tasks/DayI.php" />
         <option value="$PROJECT_DIR$/src/Tasks/DayOne.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -284,12 +275,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512233551992</updated>
-      <workItem from="1512233553307" duration="9618000" />
+      <workItem from="1512233553307" duration="11339000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9618000" />
+    <option name="totallyTimeSpent" value="11339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -365,14 +356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tasks/DayI.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -383,9 +366,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tasks/DayOne.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="52" column="48" lean-forward="true" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
+        <state relative-caret-position="432">
+          <caret line="57" column="5" lean-forward="false" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding>
+            <element signature="e#6#95#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

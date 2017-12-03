@@ -1,5 +1,7 @@
 <?php
+
 namespace AdventOfCode\Tasks;
+
 /**
  * Created by PhpStorm.
  * User: Michal Kroupa
@@ -13,7 +15,9 @@ class DayOne implements DayI
 {
     private $input;
 
-    private function findCaptchas($array) {
+    public function solvePartOne()
+    {
+        $array = $this->input;
         $sum = 0;
         $length = count($array);
         for ($i = 0; $i < $length; $i++) {
@@ -30,36 +34,27 @@ class DayOne implements DayI
         return $sum;
     }
 
-    private function sortArray($array) {
-        $sortedArray = array();
-        $length = count($array);
-        for ($i = 0; $i < $length / 2; $i++) {
-            $sortedArray[$i * 2] = $array[$i];
-            $sortedArray[($i * 2) + 1] = $array[$i + 1];
-        }
-        return $sortedArray;
-    }
-
-    public function solvePartOne()
-    {
-        $array = $this->input;
-        return $this->findCaptchas($array);
-    }
-
     public function solvePartTwo()
     {
         $array = $this->input;
-        $sortedArray = $this->sortArray($array);
-        return $this->findCaptchas($sortedArray);
+        $sum = 0;
+        $length = count($array);
+        for ($i = 0; $i < ($length / 2); $i++) {
+            if ($array[$i] === $array[($length / 2) + $i]) {
+                $sum += $array[$i];
+            }
+        }
+
+        return $sum * 2;
     }
 
-    public function resolve() {
+    public function resolve()
+    {
         $parser = new Parser();
         $this->input = $parser->parseIntoArray('./Input/DayOne');
         echo('Part one: ' . $this->solvePartOne());
         echo '<br>';
         echo('Part two: ' . $this->solvePartTwo());
     }
-
 
 }
