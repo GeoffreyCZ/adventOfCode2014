@@ -31,8 +31,13 @@ class Parser
 
     public function parseByNewlineIntoArray($fileName)
     {
-        $array = explode("\n", $this->loadFromFile($fileName));
-        return $array;
+        return explode("\n", $this->loadFromFile($fileName));
+    }
+
+    public function parseIntsBySpaceIntoArray($filename) {
+        $array = preg_split('/\s+/', $this->loadFromFile($filename));
+        $output = $this->convertArrayOfStringsToArrayOfInts($array);
+        return $output;
     }
 
     public function parseIntsByNewlineAndSpacesIntoArray($fileName)
