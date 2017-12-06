@@ -10,6 +10,13 @@ require __DIR__ . '/vendor/autoload.php';
 
 use AdventOfCode\Tasks\DayOne;
 use AdventOfCode\Tasks\DayTwo;
+use AdventOfCode\Tasks\DayFour;
+
+
+$dayFour = new DayFour();
+echo '<h3>==========</h3>';
+echo '<h3>Day four</h3>';
+$dayFour->resolve();
 
 $dayTwo = new DayTwo();
 echo '<h3>==========</h3>';

@@ -36,5 +36,19 @@ class Parser
         return $output;
     }
 
+    public function parseStringsByNewlineAndSpacesIntoArray($fileName)
+    {
+        $output = [];
+        $array = explode("\n", $this->loadFromFile($fileName));
+        foreach ($array as $key => $line) {
+            $output[] = preg_split('/\s+/',$line);
+            foreach ($output[$key] as $innerKey => $value) {
+                $output[$key][$innerKey] = strval($value);
+            }
+            array_pop($output[$key]);
+        }
+        return $output;
+    }
+
 
 }
