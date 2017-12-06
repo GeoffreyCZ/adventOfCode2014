@@ -23,10 +23,22 @@ class Parser
         return $array;
     }
 
+    public function parseIntsByNewlineIntoArray($fileName)
+    {
+        $array = explode("\n", $this->loadFromFile($fileName));
+        return $this->convertArrayOfStringsToArrayOfInts($array);
+    }
+
+    public function parseByNewlineIntoArray($fileName)
+    {
+        $array = explode("\n", $this->loadFromFile($fileName));
+        return $array;
+    }
+
     public function parseIntsByNewlineAndSpacesIntoArray($fileName)
     {
         $output = [];
-        $array = explode("\n", $this->loadFromFile($fileName));
+        $array = $this->parseByNewlineIntoArray($fileName);
         foreach ($array as $key => $line) {
             $output[] = explode(' ', $line);
             foreach ($output[$key] as $innerKey => $value) {
@@ -36,12 +48,21 @@ class Parser
         return $output;
     }
 
+    public function convertArrayOfStringsToArrayOfInts($array)
+    {
+        $output = [];
+        foreach ($array as $value) {
+            $output[] = intval($value);
+        }
+        return $output;
+    }
+
     public function parseStringsByNewlineAndSpacesIntoArray($fileName)
     {
         $output = [];
-        $array = explode("\n", $this->loadFromFile($fileName));
+        $array = $this->parseByNewlineIntoArray($fileName);
         foreach ($array as $key => $line) {
-            $output[] = preg_split('/\s+/',$line);
+            $output[] = preg_split('/\s+/', $line);
             foreach ($output[$key] as $innerKey => $value) {
                 $output[$key][$innerKey] = strval($value);
             }
