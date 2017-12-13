@@ -71,7 +71,7 @@ class Parser
             foreach ($output[$key] as $innerKey => $value) {
                 $output[$key][$innerKey] = strval($value);
             }
-            array_pop($output[$key]);
+         //   array_pop($output[$key]);
         }
         return $output;
     }
