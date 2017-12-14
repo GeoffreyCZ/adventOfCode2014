@@ -12,7 +12,7 @@ namespace AdventOfCode\Helpers;
 class Parser
 {
 
-    private function loadFromFile($fileName)
+    public function loadFromFile($fileName)
     {
         return file_get_contents($fileName);
     }
