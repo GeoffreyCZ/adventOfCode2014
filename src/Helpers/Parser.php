@@ -34,11 +34,15 @@ class Parser
         return explode("\n", $this->loadFromFile($fileName));
     }
 
-    public function parseIntsBySpaceIntoArray($filename) {
-        $array = preg_split('/\s+/', $this->loadFromFile($filename));
+    public function parseIntsBySpaceIntoArray($fileName) {
+        $array = preg_split('/\s+/', $this->loadFromFile($fileName));
         $output = $this->convertArrayOfStringsToArrayOfInts($array);
         return $output;
     }
+
+	public function parseIntsByCommasIntoArray($fileName) {
+		return explode(",", $this->loadFromFile($fileName));
+	}
 
     public function parseIntsByNewlineAndSpacesIntoArray($fileName)
     {
