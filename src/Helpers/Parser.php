@@ -40,7 +40,7 @@ class Parser
         return $output;
     }
 
-	public function parseIntsByCommasIntoArray($fileName) {
+	public function parseByCommasIntoArray($fileName) {
 		return explode(",", $this->loadFromFile($fileName));
 	}
 

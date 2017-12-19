@@ -86,7 +86,7 @@ class DayTen implements DayI
 	public function resolve()
 	{
 		$parser = new Parser();
-		$this->input = $parser->parseIntsByCommasIntoArray('./Input/DayTen');
+		$this->input = $parser->parseByCommasIntoArray('./Input/DayTen');
 		$this->input2 = $parser->loadFromFile('./Input/DayTen');
 		echo('Part one: ' . $this->solvePartOne());
 		echo '<br>';
