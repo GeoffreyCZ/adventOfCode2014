@@ -10,11 +10,41 @@ require __DIR__ . '/vendor/autoload.php';
 
 use AdventOfCode\Tasks\DayOne;
 use AdventOfCode\Tasks\DayTwo;
+use AdventOfCode\Tasks\DayThree;
 use AdventOfCode\Tasks\DayFour;
 use AdventOfCode\Tasks\DayFive;
 use AdventOfCode\Tasks\DaySix;
 use AdventOfCode\Tasks\DaySeven;
+use AdventOfCode\Tasks\DayEight;
+use AdventOfCode\Tasks\DayNine;
+use AdventOfCode\Tasks\DayTen;
+use AdventOfCode\Tasks\DayEleven;
+use AdventOfCode\Tasks\DayTwelve;
 
+$dayTwelve = new DayTwelve();
+echo '<h3>==========</h3>';
+echo '<h3>Day 12</h3>';
+$dayTwelve->resolve();
+
+$dayEleven = new DayEleven();
+echo '<h3>==========</h3>';
+echo '<h3>Day 11</h3>';
+$dayEleven->resolve();
+
+$dayTen = new DayTen();
+echo '<h3>==========</h3>';
+echo '<h3>Day 10</h3>';
+$dayTen->resolve();
+
+$dayNine = new DayNine();
+echo '<h3>==========</h3>';
+echo '<h3>Day 9</h3>';
+$dayNine->resolve();
+
+$dayEight = new DayEight();
+echo '<h3>==========</h3>';
+echo '<h3>Day 8</h3>';
+$dayEight->resolve();
 
 $daySeven = new DaySeven();
 echo '<h3>==========</h3>';
@@ -26,17 +56,20 @@ echo '<h3>==========</h3>';
 echo '<h3>Day 6</h3>';
 $daySix->resolve();
 
-
 //$dayFive = new DayFive();
 //echo '<h3>==========</h3>';
 //echo '<h3>Day 5</h3>';
 //$dayFive->resolve();
 
-
 $dayFour = new DayFour();
 echo '<h3>==========</h3>';
 echo '<h3>Day 4</h3>';
 $dayFour->resolve();
+
+$dayThree = new DayThree();
+echo '<h3>==========</h3>';
+echo '<h3>Day 3</h3>';
+$dayThree->resolve();
 
 $dayTwo = new DayTwo();
 echo '<h3>==========</h3>';

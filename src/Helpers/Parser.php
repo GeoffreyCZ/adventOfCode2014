@@ -12,7 +12,7 @@ namespace AdventOfCode\Helpers;
 class Parser
 {
 
-    private function loadFromFile($fileName)
+    public function loadFromFile($fileName)
     {
         return file_get_contents($fileName);
     }
@@ -34,11 +34,15 @@ class Parser
         return explode("\n", $this->loadFromFile($fileName));
     }
 
-    public function parseIntsBySpaceIntoArray($filename) {
-        $array = preg_split('/\s+/', $this->loadFromFile($filename));
+    public function parseIntsBySpaceIntoArray($fileName) {
+        $array = preg_split('/\s+/', $this->loadFromFile($fileName));
         $output = $this->convertArrayOfStringsToArrayOfInts($array);
         return $output;
     }
+
+	public function parseByCommasIntoArray($fileName) {
+		return explode(",", $this->loadFromFile($fileName));
+	}
 
     public function parseIntsByNewlineAndSpacesIntoArray($fileName)
     {
@@ -71,7 +75,7 @@ class Parser
             foreach ($output[$key] as $innerKey => $value) {
                 $output[$key][$innerKey] = strval($value);
             }
-            array_pop($output[$key]);
+         //   array_pop($output[$key]);
         }
         return $output;
     }
