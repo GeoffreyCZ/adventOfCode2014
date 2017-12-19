@@ -18,6 +18,12 @@ use AdventOfCode\Tasks\DayEight;
 use AdventOfCode\Tasks\DayNine;
 use AdventOfCode\Tasks\DayTen;
 use AdventOfCode\Tasks\DayEleven;
+use AdventOfCode\Tasks\DayTwelve;
+
+$dayTwelve = new DayTwelve();
+echo '<h3>==========</h3>';
+echo '<h3>Day 12</h3>';
+$dayTwelve->resolve();
 
 $dayEleven = new DayEleven();
 echo '<h3>==========</h3>';
