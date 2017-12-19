@@ -15,6 +15,8 @@ class DaySeven implements DayI
 
     private $input;
 
+    private $input2;
+
     public function solvePartOne()
     {
         $array = $this->input;
@@ -46,7 +48,7 @@ class DaySeven implements DayI
 
     public function solvePartTwo()
     {
-        $lines = explode(PHP_EOL, $input);
+        $lines = explode(PHP_EOL, $this->input2);
         $arr = [];
         foreach ($lines as $line) {
             if (preg_match('/^(.*?) \((\d+)\)$/', $line, $matches)) {
@@ -129,7 +131,7 @@ class DaySeven implements DayI
         $this->input = $parser->parseStringsByNewlineAndSpacesIntoArray('./Input/DaySeven');
         echo('Part one: ' . $this->solvePartOne());
         echo '<br>';
-        $this->input2 = $parser->load('./Input/DaySeven');
+        $this->input2 = $parser->loadFromFile('./Input/DaySeven');
         echo('Part two: ' . $this->solvePartTwo());
     }
 
